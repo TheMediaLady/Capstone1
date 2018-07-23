@@ -10,16 +10,22 @@ namespace Capstone1
     {
         static void Main(string[] args)
 
-
+         
+        
+        
         {
-            Console.WriteLine("Enter your word to be translated. ");
+              do
+              {
+                    
+            Console.WriteLine("Enter your word to be translated or enter bye to exit . ");
             string userWord = Console.ReadLine();
             userWord = userWord.ToLower();
            
             string front = "";
             string back = "";
 
-
+            
+            
             char[] letters = new char[userWord.Length];
             letters = userWord.ToCharArray();
 
@@ -77,10 +83,12 @@ namespace Capstone1
                 back = back + letters[i];
             }  
             
+            
             Console.WriteLine($"{back}{front}" + "ay");
             Console.ReadLine();
-        }
+           } while (userName != "bye");           
+            }
+             
 
-
-        }
-    }
+     }   
+ }   
